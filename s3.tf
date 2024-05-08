@@ -43,7 +43,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
       {
         Effect    = "Allow"
         Principal = "*"
-        Action    = ["s3:GetObject"]
+        Action    = ["s3:GetObject","s3:PutObject"]
         Resource  = ["arn:aws:s3:::${var.project_name}-${var.web_file_bucket_name}/*"]
       }
     ]
