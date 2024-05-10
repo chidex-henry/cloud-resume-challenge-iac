@@ -23,7 +23,7 @@ resource "aws_dynamodb_table" "resume-web-table" {
 
   ttl {
     attribute_name = "TimeToExist"
-    enabled        = false
+    enabled        = true
   }
 
   global_secondary_index {
